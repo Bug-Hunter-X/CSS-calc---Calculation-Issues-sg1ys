@@ -1,0 +1,3 @@
+# CSS calc() Calculation Issues
+
+This repository demonstrates a common issue with the CSS `calc()` function involving unexpected behavior when combining percentages and other units, or handling spaces in the calculation. The `bug.css` file contains the problematic code, while `bugSolution.css` provides a corrected version.  The primary issue is related to operator precedence and unit interpretation within `calc()`. The solution often involves restructuring the calculation or using different units to achieve the desired layout.
