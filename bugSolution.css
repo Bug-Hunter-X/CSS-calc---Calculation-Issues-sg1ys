@@ -1,0 +1,23 @@
+To avoid these issues, be mindful of operator precedence within `calc()` and ensure that all units are consistent. One solution is to explicitly use the same unit throughout the calculation or to convert units to avoid ambiguity. Here's an example of how to improve the code:
+
+```css
+.element {
+  width: calc(50% + 10px); /* Might not be interpreted as intended */
+}
+
+/* Solution */
+.element {
+  width: calc((50% / 100) * 100px + 10px); /*Use same unit after conversion*/
+}
+
+/* Another Solution (if 50% of the parent is available):*/
+.element {
+  width: calc(50% + 10px); /*Correct if the percentage is calculated first*/
+}
+
+/* Avoid unexpected behaviour with spaces: */
+.element {
+  width:calc(50% + 10px); /*No spaces around the + operator*/
+}
+```
+By carefully structuring the calculations and understanding the order of operations in `calc()`, you can avoid these problems and ensure that your layouts render as intended.
